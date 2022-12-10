@@ -13,7 +13,7 @@ export function DisplayTodo() {
   useEffect(
     function () {
       axios
-        .get("http://localhost:4000/api/todoapp")
+        .get(`${process.env.REACT_APP_BASE_URL}/api/todoapp`)
         .then((res) => {
           setInfoTodo(res.data);
         })
